@@ -1,10 +1,13 @@
 <template>
-  <baidu-map class="bm-view" v-bind="mapOptions">
+  <baidu-map class="bm-view"
+             v-bind="mapOptions">
     <bm-control :offset="{ width: '10px', height: '10px' }">
-      <bm-auto-complete v-model="keyword" :sugStyle="{ zIndex: 1 }">
+      <bm-auto-complete v-model="keyword"
+                        :sugStyle="{ zIndex: 1 }">
       </bm-auto-complete>
     </bm-control>
-    <bm-local-search :keyword="keyword" :auto-viewport="true"></bm-local-search>
+    <bm-local-search :keyword="keyword"
+                     :auto-viewport="true"></bm-local-search>
   </baidu-map>
 </template>
  
@@ -24,7 +27,7 @@ export default {
     BmAutoComplete,
     BmLocalSearch,
   },
-  data() {
+  data () {
     return {
       mapOptions: {
         ak: "ak",
